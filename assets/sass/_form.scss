@@ -1,0 +1,223 @@
+h1 {
+  font-size: 23px;
+  font-weight: 400;
+  margin: 0;
+  padding: 9px 15px 4px 0;
+  line-height: 29px;
+}
+
+select, input:not([type=checkbox]):not([type=radio]):not([type=file]), textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 10px;
+  line-height: 120%;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .07);
+  background-color: #fff;
+  color: #32373c;
+  outline: 0;
+  -webkit-transition: 50ms border-color ease-in-out;
+  transition: 50ms border-color ease-in-out;
+  &:focus {
+    border-color: #5b9dd9;
+    -webkit-box-shadow: 0 0 2px rgba(30, 140, 190, .8);
+    box-shadow: 0 0 2px rgba(30, 140, 190, .8);
+  }
+  &.big {
+    padding: 3px 8px;
+    font-size: 1.7em;
+    height: 1.7em;
+    width: 100%;
+    outline: 0;
+    margin: 0 0 3px;
+    background-color: #fff;
+  }
+}
+select {
+  width:auto;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+  padding: 10px;
+}
+
+button:not(.toggle) {
+  background: #0085ba;
+  border-color: #0073aa #006799 #006799;
+  -webkit-box-shadow: 0 1px 0 #006799;
+  box-shadow: 0 1px 0 #006799;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 26px;
+  height: 28px;
+  margin: 0;
+  padding: 0 10px 1px;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-appearance: none;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  &:hover {
+    background: #008ec2;
+    border-color: #006799;
+    color: #fff;
+  }
+  &:focus {
+    -webkit-box-shadow: 0 1px 0 #0073aa, 0 0 2px 1px #33b3db;
+    box-shadow: 0 1px 0 #0073aa, 0 0 2px 1px #33b3db;
+  }
+}
+
+.form {
+  li {
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &.label {
+    li {
+      overflow: hidden;
+      margin-bottom: 25px;
+      .label, label:not(.not) {
+        height:100%;
+        cursor: pointer;
+        float: left;
+        width:200px;
+        font-weight:bold;
+        line-height: 20px;
+        padding-top:8px;
+      }
+      input:not([type=checkbox]):not([type=radio]):not([type=file]), textarea {
+        width:400px;
+      }
+      p {
+        padding-top:10px;
+        font-style: italic;
+        color: #666;
+      }
+      label.not {
+        display: block;
+        padding-top:12px;
+      }
+      &.submit {
+        padding-left:200px;
+      }
+      &.line {
+        span {
+          display: block;
+          height:1px;
+          background-color: #e9e9e9;
+        }
+      }
+      .form-content {
+        padding-left:200px;
+      }
+    }
+  }
+}
+
+.btn {
+  color: #555;
+  border-color: #ccc;
+  background: #f7f7f7;
+  -webkit-box-shadow: 0 1px 0 #ccc;
+  box-shadow: 0 1px 0 #ccc;
+  vertical-align: top;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 26px;
+  height: 28px;
+  margin: 0;
+  padding: 0 10px 1px;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-appearance: none;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  &:hover {
+    background: #fafafa;
+    border-color: #999;
+    color: #23282d;
+  }
+  &:focus {
+    border-color: #5b9dd9;
+    -webkit-box-shadow: 0 0 3px rgba(0, 115, 170, .8);
+    box-shadow: 0 0 3px rgba(0, 115, 170, .8);
+  }
+  &.right {
+    float: right;
+  }
+}
+
+.table {
+  table {
+    background-color: #fff;
+    width:100%;
+    thead {
+      tr  {
+        th {
+          text-align: left;
+          padding: 8px 10px;
+          line-height: 1.4em;
+          border-bottom: 1px solid #e1e1e1;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          line-height: 1.5em;
+          padding: 8px 10px;
+          a {
+            color: $basecolor;
+            &.title {
+              font-weight:500;
+              font-size:16px;
+            }
+          }
+          .magic-links {
+            color: #ddd;
+            padding-top:5px;
+            visibility: hidden;
+            a {
+              &.trash {
+                color: #a00;
+              }
+              &:hover {
+                color: $hovercolor;
+              }
+            }
+            .date {
+              opacity:.8;
+            }
+          }
+        }
+        &:hover .magic-links {
+          visibility: visible;
+        }
+        &:nth-child(odd) td {
+          background-color: #f9f9f9;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <!--styles-->
+    <link rel="stylesheet" href="assets/styles/main.css">
+
+    <!--scripts-->
+    <script src="assets/scripts/jquery-1.12.2.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.5.7/basic/ckeditor.js"></script>
+    <script src="assets/scripts/admin.js"></script>
+
+</head>
+<body>
+
+<!--navbar-->
+<div class="navbar">
+    <ul dropdown>
+        <li>
+            <a href="#">
+                <span class="fa fa-home"></span>
+                SAKI OFFICAL
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="fa fa-plus"></span>
+                New
+            </a>
+            <ul>
+                <li>
+                    <a href="#">
+                        New Post
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        New Page
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        New Category
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!--sidebar-->
+<div class="sidebar">
+
+    <ul>
+        <li>
+            <a href="#">
+                <span class="fa fa-tachometer"></span>
+                <span class="title">
+                    Dashboard
+                </span>
+            </a>
+        </li>
+        <li class="active">
+            <a href="#">
+                <span class="fa fa-thumb-tack"></span>
+                <span class="title">
+                    Posts
+                </span>
+            </a>
+            <ul class="sub-menu">
+                <li class="active">
+                    <a href="#">
+                        All Posts
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Add New
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Categories
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Tags
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <span class="fa fa-file-image-o"></span>
+                <span class="title">
+                    Media
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="fa fa-file"></span>
+                <span class="title">
+                    Pages
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="fa fa-comment"></span>
+                <span class="title">
+                    Comments
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="fa fa-plug"></span>
+                <span class="title">
+                    Plugins
+                </span>
+            </a>
+            <ul class="sub-menu">
+                <li>
+                    <a href="#">
+                        Installed Plugins
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Add New
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Editor
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <span class="fa fa-wrench"></span>
+                <span class="title">
+                    Tools
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="fa fa-cog"></span>
+                <span class="title">
+                    Settings
+                </span>
+            </a>
+        </li>
+        <li class="line">
+            <span></span>
+        </li>
+    </ul>
+    <a href="#" class="collapse-menu">
+        <span class="fa fa-arrow-circle-left"></span>
+        <span class="title">
+            Collapse menu
+        </span>
+    </a>
+
+</div>
+
+<!--content-->
+<div class="content">
+
+    <div class="box-">
+        <h1>
+            Settings
+        </h1>
+    </div>
+
+    <div class="clear" style="height: 10px;"></div>
+
+    <div class="box-">
+        <form action="" class="form label">
+            <ul>
+                <li>
+                    <label for="title">Site Title</label>
+                    <div class="form-content">
+                        <input type="text" id="title">
+                    </div>
+                </li>
+                <li>
+                    <label for="tag-line">Tag Line</label>
+                    <div class="form-content">
+                        <input type="text" id="tag-line">
+                        <p>
+                            In a few words, explain what this site is about.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <label for="description">Description</label>
+                    <div class="form-content">
+                        <textarea name="description" id="description" cols="30" rows="5"></textarea>
+                        <p>
+                            In a few words, explain what this site is about.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="label">
+                        Membership
+                    </div>
+                    <div class="form-content">
+                        <label class="not" for="membership">
+                            <input type="checkbox" value="1" id="membership">  Anyone can register
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <label for="select">New User Default Role</label>
+                    <div class="form-content">
+                        <select name="select" id="select">
+                            <option value="">User</option>
+                            <option value="">Admin</option>
+                            <option value="">Moderator</option>
+                        </select>
+                        <p>
+                            In a few words, explain what this site is about.
+                        </p>
+                    </div>
+                </li>
+                <li class="submit">
+                    <button type="submit">Save Changes</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

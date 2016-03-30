@@ -1,0 +1,413 @@
+/**
+ * @author      Tayfun Erbilen
+ * @web         http://erbilen.net
+ * @mail        tayfunerbilen@gmail.com
+ */
+
+$basecolor: #0073aa;
+$hovercolor: #00b9eb;
+
+// reset
+@import "reset";
+
+// form elements
+@import "form";
+
+// font awesome
+@import "../vendor/font-awesome-4.5.0/css/font-awesome.min.css";
+
+// font
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700&subset=latin,latin-ext');
+
+html, body {
+  height:100%;
+  min-height:100%;
+  font-family: 'Fira Sans', sans-serif;
+  background-color: #f1f1f1;
+  font-size:14px;
+}
+
+// navbar
+.navbar {
+  height:32px;
+  background-color: #23282d;
+  position: relative;
+  z-index: 2;
+  >ul {
+    >li {
+      float: left;
+      position: relative;
+      >a {
+        display: block;
+        color: #eee;
+        font-size:14px;
+        line-height:32px;
+        padding:0 10px;
+        .fa {
+          color: #9ca1a6;
+          margin-right: 5px;
+          font-size:16px;
+          position: relative;
+          top:1px;
+        }
+        &:hover {
+          background-color: #32373c;
+          color: $hovercolor;
+          .fa {
+            color: $hovercolor;
+          }
+        }
+      }
+      &.active >a {
+        background-color: #32373c;
+        color: $hovercolor;
+        .fa {
+          color: $hovercolor;
+        }
+      }
+      ul {
+        display: none;
+        position: absolute;
+        top:32px;
+        left:0;
+        width:160px;
+        padding: 3px 0;
+        background-color: #32373c;
+        li {
+          a {
+            padding:0 10px;
+            display: block;
+            line-height: 30px;
+            color: #aeb3b8;
+            font-size:14px;
+            &:hover {
+              color: $hovercolor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// sidebar
+.sidebar {
+  height:calc(100% - 32px);
+  height:-webkit-calc(100% - 32px);
+  width: 180px;
+  background: #23282d;
+  box-sizing: border-box;
+  padding-top:12px;
+  float: left;
+  >ul {
+    >li {
+      >a {
+        display: block;
+        line-height:35px;
+        color: #eee;
+        font-size:14px;
+        .fa {
+          color: #9ca1a6;
+          width:30px;
+          text-align: center;
+          font-size:16px;
+          position: relative;
+          top:1px;
+        }
+        &:hover {
+          background-color: #191e23;
+          color: $hovercolor;
+          span {
+            color: $hovercolor;
+          }
+        }
+      }
+      &.hover {
+        background-color: #191e23;
+        color: $hovercolor;
+        span {
+          color: $hovercolor;
+        }
+      }
+      &.active {
+        .sub-menu {
+          display: block;
+        }
+        >a {
+          background-color: $basecolor;
+          color: #fff;
+          position: relative;
+          &:before {
+            content: '';
+            border:8px solid transparent;
+            border-right-color: #f1f1f1;
+            position: absolute;
+            top:50%;
+            margin-top:-8px;
+            right:0;
+          }
+          span {
+            color: #fff;
+          }
+        }
+      }
+      &.line {
+        line-height:10px;
+        padding-bottom: 10px;
+        span {
+          height:1px;
+          background-color: rgba(#fff, .1);
+          display: inline-block;
+          width:100%;
+        }
+      }
+      position: relative;
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top:0;
+        left:180px;
+        width:160px;
+        background-color: #32373c;
+        padding: 10px 15px;
+        &:before {
+          content: '';
+          border:8px solid transparent;
+          border-right-color: #32373c;
+          position: absolute;
+          top:11px;
+          left:-16px;
+        }
+        li {
+          a {
+            display: block;
+            line-height: 30px;
+            font-size:14px;
+            color: #b4b9be;
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .sub-menu {
+      padding: 7px 15px;
+      background-color: #32373c;
+      display: none;
+      li {
+        a {
+          display: block;
+          line-height:30px;
+          font-size:13px;
+          color: #eee;
+          &:hover {
+            color: $hovercolor;
+          }
+        }
+        &.active a {
+          font-weight: bold;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .collapse-menu {
+    display: block;
+    line-height:35px;
+    color: #a0a5aa;
+    font-size:13px;
+    .fa {
+      color: #a0a5aa;
+      width:30px;
+      text-align: center;
+      font-size:16px;
+      position: relative;
+      top:1px;
+    }
+    &:hover {
+      color: $hovercolor;
+      .fa {
+        color: $hovercolor;
+      }
+    }
+  }
+  &.fix {
+    width:50px;
+    .title {
+      display: none;
+    }
+    .fa {
+      width:50px;
+      font-size:20px;
+      text-indent: -3px;
+    }
+    >ul {
+      >li {
+        >a {
+          padding:5px 0;
+        }
+        .dropdown-menu {
+          left:50px;
+          &:before {
+            top:15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// content
+.content {
+  padding: 15px 15px 15px 15px;
+  box-sizing: border-box;
+  height:calc(100% - 32px);
+  height:-webkit-calc(100% - 32px);
+  overflow: auto;
+  
+  .box-container {
+    width:100%;
+    float: left;
+    zoom: 1;
+    &:before, &:after {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+    &.container-25 {
+      width:25%;
+    }
+    &.container-50 {
+      width:50%;
+    }
+    &.container-75 {
+      width:75%;
+    }
+  }
+
+  .box- {
+    margin:0 8px 15px;
+    h1 {
+      a {
+        margin-left: 4px;
+        padding: 7px 8px;
+        position: relative;
+        top: -3px;
+        text-decoration: none;
+        border: none;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        background: #e0e0e0;
+        text-shadow: none;
+        font-size: 13px;
+        color: $basecolor;
+        font-weight:500;
+        &:hover {
+          background-color: $basecolor;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .box {
+    margin:0 8px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    h3 {
+      line-height:35px;
+      border-bottom: 1px solid #eee;
+      padding-left: 12px;
+      font-weight: bold;
+      letter-spacing: .5px;
+      >.fa {
+        color: #606569;
+        margin-right: 3px;
+      }
+      button {
+        float: right;
+        width:35px;
+        height:35px;
+        background: transparent;
+        cursor: pointer;
+        color: #a0a5aa;
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+    .box-content {
+      padding:15px;
+      p {
+        line-height: 20px;
+      }
+    }
+  }
+
+  .post-rightbar {
+    float: right;
+    width:280px;
+    margin-left:-300px;
+    position: relative;
+    z-index: 1;
+  }
+  .post-content {
+    width:100%;
+    padding-right: 280px;
+    box-sizing: border-box;
+    float: left;
+  }
+  
+  .publish-content {
+    margin:15px -15px -15px;
+    background-color: #f5f5f5;
+    border-top:1px solid #ddd;
+    padding:10px;
+    text-align: right;
+  }
+
+}
+
+// ckeditor fix
+.cke_chrome {
+  border:1px solid #ddd;
+  box-shadow: 0 0 3px rgba(0,0,0,.05);
+}
+
+// pagination
+.pagination {
+  text-align: center;
+  padding-top:20px;
+  line-height: 30px;
+  ul {
+    display: inline-block;
+    li {
+      float: left;
+      margin:0 5px;
+      a {
+        display: block;
+        padding:0 15px;
+        line-height: 35px;
+        border-radius: 2px;
+        background: #eee;
+        background: rgba(0,0,0,.05);
+        font-weight: 400;
+        color: #222;
+        &:hover {
+          background: rgba(0,0,0,.10);
+        }
+      }
+      &.active a {
+        background-color: #32373c;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@import "responsive";
