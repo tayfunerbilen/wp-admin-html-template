@@ -4,10 +4,10 @@ Wordpress admin temasını sevenler için kabaca html olarak ayarladım, küçü
 # demo
 Demo görmek isteyenler için;
 
-http://darkod.com/wpadmin/index.html
-http://darkod.com/wpadmin/posts.html
-http://darkod.com/wpadmin/new-post.html
-http://darkod.com/wpadmin/settings.html
+1. [Index](http://darkod.com/wpadmin/index.html)
+2. [Posts](http://darkod.com/wpadmin/posts.html)
+3. [New Post](http://darkod.com/wpadmin/new-post.html)
+4. [Settings](http://darkod.com/wpadmin/settings.html)
 
 # son olarak
 teşekkürler WordPress :)
