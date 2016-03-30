@@ -221,3 +221,33 @@ button:not(.toggle) {
     }
   }
 }
+
+// messages
+.message {
+  padding:12px;
+  border-left: 4px solid #777;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+  line-height:1.5;
+  color: #444;
+  font-size:13px;
+  &.info {
+    border-color: #00a0d2;
+  }
+  &.error {
+    border-color: #dd3d36;
+  }
+  &.success {
+    border-color: #7ad03a;
+  }
+  &.warning {
+    border-color: #ffba00;
+  }
+  a {
+    color: $basecolor;
+    &:hover {
+      color: lighten($basecolor, 10%);
+    }
+  }
+}
