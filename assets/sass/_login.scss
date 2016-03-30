@@ -1,0 +1,76 @@
+// login screen
+.login-screen {
+  width:320px;
+  margin:0 auto;
+  padding-top:150px;
+
+  // login logo
+  .login-logo {
+    text-align: center;
+    margin-bottom: 30px;
+    img {
+      height:70px;
+    }
+  }
+
+  form {
+    margin-top: 20px;
+    margin-left: 0;
+    padding: 26px 28px 32px;
+    font-weight: 400;
+    overflow: hidden;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13);
+    box-shadow: 0 1px 3px rgba(0,0,0,.13);
+    margin-bottom: 30px;
+    ul {
+      li {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        label:not(.checkbox) {
+          display: block;
+          color: #777;
+          padding-bottom: 5px;
+        }
+        .checkbox {
+          font-size:13px;
+          padding-top:6px;
+          display: block;
+          color: #777;
+          input {
+            margin-right: 5px;
+          }
+        }
+        input {
+          font-size: 24px !important;
+          padding: 3px 10px !important;
+          line-height:30px !important;
+          background-color: #fbfbfb !important;
+          &:focus {
+            background-color: #fff !important;
+          }
+        }
+        button {
+          float: right;
+        }
+      }
+    }
+  }
+  .login-links {
+    padding-left:30px;
+    a {
+      display: block;
+      margin-bottom: 20px;
+      color: #999;
+      .fa {
+        width:30px;
+        text-align: center;
+      }
+      &:hover {
+        color: $basecolor;
+      }
+    }
+  }
+}
