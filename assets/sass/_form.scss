@@ -86,6 +86,11 @@ button:not(.toggle) {
     &:last-child {
       margin-bottom: 0;
     }
+    label.title {
+      display: block;
+      margin-bottom: 7px;
+      color: #444;
+    }
   }
   &.label {
     li {
