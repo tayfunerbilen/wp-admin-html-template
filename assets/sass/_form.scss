@@ -91,6 +91,9 @@ button:not(.toggle) {
       margin-bottom: 7px;
       color: #444;
     }
+    input {
+      max-width: 100%;
+    }
   }
   &.label {
     li {
