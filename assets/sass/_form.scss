@@ -192,6 +192,7 @@ button:not(.toggle) {
         td {
           line-height: 1.5em;
           padding: 8px 10px;
+          vertical-align: middle;
           a {
             color: $basecolor;
             &.title {

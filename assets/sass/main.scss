@@ -102,6 +102,8 @@ html, body {
   box-sizing: border-box;
   padding-top:12px;
   float: left;
+  position: relative;
+  z-index: 20;
   >ul {
     >li {
       >a {
