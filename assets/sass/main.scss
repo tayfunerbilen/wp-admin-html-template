@@ -126,6 +126,19 @@ html, body {
             color: $hovercolor;
           }
         }
+        .pending-count {
+          background-color: #d54e21;
+          color: #fff !important;
+          font-size:10px;
+          line-height: 16px;
+          padding:0 5px;
+          min-width: 6px;
+          text-align: center;
+          font-weight: 600;
+          margin: 1px 0 0 2px;
+          border-radius: 10px;
+          display: inline-block;
+        }
       }
       &.hover {
         background-color: #191e23;
@@ -153,6 +166,9 @@ html, body {
           }
           span {
             color: #fff;
+          }
+          .pending-count {
+            background: $hovercolor;
           }
         }
       }

@@ -224,7 +224,7 @@ button:not(.toggle) {
         &:hover .magic-links {
           visibility: visible;
         }
-        &:nth-child(odd) td {
+        &:nth-child(odd) {
           background-color: #f9f9f9;
         }
       }
