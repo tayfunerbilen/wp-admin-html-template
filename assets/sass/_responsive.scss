@@ -26,48 +26,74 @@
 
 @media all and (max-width: 900px) {
 
+  .navbar {
+    height: 50px;
+    > ul {
+      > li {
+        > a {
+          line-height: 50px;
+          font-size: 22px;
+          .fa {
+            font-size: 25px;
+          }
+          .title {
+            display: none;
+          }
+        }
+        ul {
+          top:50px;
+        }
+      }
+    }
+  }
+  .content,
+  .sidebar {
+    height: calc(100% - 50px);
+    height: -webkit-calc(100% - 50px);
+  }
+
   .form.label {
     li {
       label, .label {
         float: none !important;
-        width:100%;
+        width: 100%;
         display: block;
         padding-bottom: 10px !important;
       }
       .form-content {
-        padding-left:0 !important;
+        padding-left: 0 !important;
         input:not([type=file]):not([type=checkbox]):not([type=radio]), textarea, select {
-          width:100% !important;
+          width: 100% !important;
         }
       }
       &.submit {
-        padding-left:0;
+        padding-left: 0;
       }
     }
   }
 
-  .sidebar  {
-    width:50px!important;;
+  .sidebar {
+    width: 50px !important;;
     .title {
-      display: none!important;;
+      display: none !important;;
     }
     .fa {
-      width:50px !important;;
-      font-size:20px !important;
+      width: 50px !important;;
+      font-size: 20px !important;
       text-indent: -3px !important;;
     }
-    >ul {
-      >li {
-        >a {
-          padding:5px 0!important;;
+    > ul {
+      > li {
+        > a {
+          padding: 5px 0 !important;;
         }
         .sub-menu {
           display: none !important;;
         }
         .dropdown-menu {
-          left:50px!important;;
+          left: 50px !important;;
           &:before {
-            top:15px!important;;
+            top: 15px !important;;
           }
         }
       }
