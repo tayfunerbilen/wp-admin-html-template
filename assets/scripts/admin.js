@@ -8,7 +8,7 @@ $(function () {
     $('.box >h3').append('<button type="button" class="toggle"><span class="fa fa-caret-up"></span></button>');
 
     $(document).on('click', 'button.toggle', function (e) {
-        var id = $(this).closest('.box-container').attr('id');
+        var id = $(this).closest('.box').attr('id');
         $(this).parent().next().toggle();
         if ($('.fa', this).hasClass('fa-caret-up')) {
             $('.fa', this).removeClass('fa-caret-up').addClass('fa-caret-down');
